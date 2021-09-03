@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 인터페이스의 패키지 경로와 클래스명 -->
+<mapper namespace="com.springBatchTest.mapper.TestDataMapper">
+
+	<!-- 수행할 sql -->
+    <select id="getTestDataList" resultType="java.util.Map">
+	<![CDATA[
+		SELECT 1 AS COL1 
+		UNION ALL 
+		SELECT 2 AS COL1	
+	]]>
+    </select>
+    
+	<!-- 수행할 sql -->
+    <select id="getAmUsersChangeList" resultType="java.util.Map">
+	<![CDATA[
+		SELECT AM_INTERNAL_USER_ID,AM_INTERNAL_DEPARTMENT_ID FROM TB_AM_USERS_CHANGE
+	]]>
+    </select>
+</mapper>
