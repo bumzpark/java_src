@@ -18,7 +18,7 @@ public class SpringBatchTestApplication {
 			m.selectDataf(); 
 			m.selectUserf(); 
 		}catch (Exception e) {
-			// TODO: handle exception
+			// TODO: handle except   ion
 			System.out.println(e.getMessage());
 		}
 	}
